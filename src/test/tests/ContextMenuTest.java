@@ -14,7 +14,7 @@ public class ContextMenuTest extends BaseTest{
         actions.contextClick(driver.findElement(By.id("hot-spot"))).build().perform();
         Alert alert =driver.switchTo().alert();
 
-        assertEquals(alert.getText(),"You selected a context menu", "Неверный текст сообщения");
+        Assert.assertEquals(alert.getText(),"You selected a context menu", "Неверный текст сообщения");
         alert.accept();
     }
 }
